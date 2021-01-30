@@ -8,7 +8,7 @@ class Node:
     def generate_child(self):
         """ Generate child nodes from the given node by moving the blank space
             either in the four directions {up,down,left,right} """
-        x, y = self.find(self.data, '_')
+        x, y = self.find(self.data, '0')
         """ val_list contains position values for moving the blank space in either of
             the 4 directions [up,down,left,right] respectively. """
         val_list = [[x, y - 1], [x, y + 1], [x - 1, y], [x + 1, y]]
@@ -75,13 +75,13 @@ class Puzzle:
         temp = 0
         for i in range(0, self.n):
             for j in range(0, self.n):
-                if start[i][j] != goal[i][j] and start[i][j] != '_':
+                if start[i][j] != goal[i][j] and start[i][j] != '0':
                     temp += 1
         return temp
 
     def process(self):
         """ Accept Start and Goal Puzzle state"""
-        print("Enter the start state matrix \n")
+        print("Enter the Initial state matrix \n")
         start = self.accept()
         print("Enter the goal state matrix \n")
         goal = self.accept()
@@ -93,7 +93,9 @@ class Puzzle:
         print("\n\n")
         while True:
             cur = self.open[0]
-            print("")
+            print(" ")
+            print("show the step")
+            print(" ")
             print("  | ")
             print("  | ")
             print(" \\\'/ \n")
