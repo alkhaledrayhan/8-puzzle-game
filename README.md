@@ -20,10 +20,15 @@ N-Puzzle or sliding puzzle is a popular puzzle that consists of N tiles where N 
 # Rules for solving the puzzle:
 
 Instead of moving the tiles in the empty space, we can visualize moving the empty space in place of the tile, basically swapping the tile with the empty space. The empty space can only move in four directions viz.,
-1. Up<br/>
-2.Down<br/>
-3. Right or<br/>
-4. Left<br/>
+1. Up
+
+2.Down
+
+3. Right or
+
+4. Left
+
+
 The empty space cannot move diagonally and can take only one step at a time (i.e. move the empty space one position at a time).
 
 Before we talk about the A* algorithm, we need to discuss Heuristic Search.
@@ -46,8 +51,9 @@ From Fig 1, we can calculate the h-score by comparing the initial(current) state
 Thus, h-score = 5 and g-score = 0 as the number of nodes traversed from the start node to the current node is 0.
 
  
-Diagram:
+# Diagram:
 
+![Image of Yaktocat](https://github.com/Rayhan1996/8-puzzle-game/blob/main/8%20puzzle%20diagram.jpg)
 
 
 # How A* solves the 8-Puzzle problem:
