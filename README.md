@@ -8,7 +8,7 @@ Now, solving 8 puzzle game using A* Algorithms
   Language: python
   Environment: Windows XP
   Source Filename: 8 puzzle.py
-Let’s start with what I mean by an “8-Puzzle” problem.
+# Let’s start with what I mean by an “8-Puzzle” problem.
 
 N-Puzzle or sliding puzzle is a popular puzzle that consists of N tiles where N can be 8, 15, 24, and so on. In our example N = 8. The puzzle is divided into sqrt(N+1) rows and sqrt(N+1) columns. Eg. 15-Puzzle will have 4 rows and 4 columns and an 8-Puzzle will have 3 rows and 3 columns. The puzzle consists of N tiles and one empty space where the tiles can be moved. Start and Goal configurations (also called state) of the puzzle are provided. The puzzle can be solved by moving the tiles one by one in the single empty space and thus achieving the Goal configuration.The tiles in the initial(start) state can be moved in the empty space in a particular order and thus achieve the goal state.
 
@@ -51,7 +51,8 @@ Diagram:
 # How A* solves the 8-Puzzle problem:
 
 We first move the empty space in all the possible directions in the start state and calculate the f-score for each state. This is called expanding the current state.
-After expanding the current state, it is pushed into the closed list and the newly generated states are pushed into the open list. A state with the least f-score is selected and expanded again. This process continues until the goal state occurs as the current state. Basically, here we are providing the algorithm a measure to choose its actions. The algorithm chooses the best possible action and proceeds in that path./////////////////////
+After expanding the current state, it is pushed into the closed list and the newly generated states are pushed into the open list. A state with the least f-score is selected and expanded again. This process continues until the goal state occurs as the current state. Basically, here we are providing the algorithm a measure to choose its actions. 
+The algorithm chooses the best possible action and proceeds in that path.
 This solves the issue of generating redundant child states, as the algorithm will expand the node with the least f-score.
 
 # Implementation of N-Puzzle in Python:
