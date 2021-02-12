@@ -6,7 +6,8 @@ class Node:
         self.value = value
 
     def generate_child(self):
-
+        """ Generate child nodes from the given node by moving the blank space
+            either in the four directions"""
         x, y = self.find(self.data, '0')
         """ val_list contains position values for moving the blank space in either of
             the 4 directions [up,down,left,right] respectively. """
